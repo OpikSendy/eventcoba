@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EventCoba.Dark" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:colorBackground">@color/colorBackgroundDark</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
+    </style>
+</resources>
