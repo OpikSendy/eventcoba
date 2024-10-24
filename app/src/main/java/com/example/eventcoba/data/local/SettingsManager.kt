@@ -4,8 +4,10 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -38,6 +40,7 @@ class SettingsManager @Inject constructor(
         preferences[THEME_KEY] ?: false // Default ke light mode
     }
         .distinctUntilChanged()
+        .flowOn(Dispatchers.IO)
 
     // Menyimpan pilihan tema
     suspend fun saveTheme(isDarkMode: Boolean) {

@@ -7,6 +7,7 @@ import androidx.work.Configuration
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -26,7 +27,7 @@ class MyApp : Application(), Configuration.Provider {
     }
 
     private fun setupTheme() {
-        CoroutineScope(Dispatchers.Main).launch {
+        CoroutineScope(Dispatchers.Main + SupervisorJob()).launch {
             settingsManager.themeFlow.collectLatest { isDark ->
                 AppCompatDelegate.setDefaultNightMode(
                     if (isDark) AppCompatDelegate.MODE_NIGHT_YES

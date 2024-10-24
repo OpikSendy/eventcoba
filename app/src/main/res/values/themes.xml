@@ -1,17 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base Light Theme -->
     <style name="Base.Theme.EventCoba" parent="Theme.Material3.DayNight.NoActionBar">
-<!--        <item name="android:colorBackground">@color/colorBackground</item>-->
-<!--        <item name="android:textColorPrimary">@color/colorOnBackground</item>-->
     </style>
-
-
 
     <!-- Dark Theme -->
     <style name="Base.Theme.EventCoba.Dark" parent="Theme.Material3.DayNight.NoActionBar">
-<!--        <item name="android:colorBackground">@color/colorBackgroundDark</item>-->
-<!--        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>-->
     </style>
-
-
 </resources>

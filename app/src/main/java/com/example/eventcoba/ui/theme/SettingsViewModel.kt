@@ -42,8 +42,6 @@ class SettingsViewModel @Inject constructor(
         activity.recreate()
     }
 
-
-
     // Flow untuk reminder
     val reminderFlow: Flow<Boolean> = settingsManager.reminderFlow
 
